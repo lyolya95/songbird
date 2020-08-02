@@ -4,7 +4,7 @@ import { MenuProps } from './Menu.model';
 
 export const Menu = ({ category }: MenuProps) => {
   return (
-    <div>
+    <div className="menu">
       <ul>
         {category.map((i: string, idx: number) => (
           <li key={idx}>{i}</li>

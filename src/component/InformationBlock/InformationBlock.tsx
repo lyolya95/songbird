@@ -1,17 +1,20 @@
 import { CardMedia } from '@material-ui/core';
 import React from 'react';
+import imgInformation from '../../image/logo.jpg';
 import './InformationBlock.css';
 
 export const InformationBlock = () => {
   return (
-    <div>
-      <div>
-        <img src="#" alt="Изображение исполнителя" />
-        <span></span>
-        <span></span>
-        <CardMedia image="#" />
+    <div className="information-block">
+      <div className="block1">
+        <img src={imgInformation} alt="Изображение исполнителя" />
+        <div>
+          <h2>1</h2>
+          <h3>2</h3>
+          <CardMedia image="#" />
+        </div>
       </div>
-      <div></div>
+      <div className="block2">Opisanie</div>
     </div>
   );
 };

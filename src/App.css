@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+}
+
+.button-next button {
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+.information-block {
+  width: 70%;
+  padding: 10px;
+  background: yellow;
+}
+.information-block .block1 {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.information-block .block1 img {
+  width: 220px;
+  height: 180px;
+  border-radius: 5%;
+  margin-right: 10px;
+}

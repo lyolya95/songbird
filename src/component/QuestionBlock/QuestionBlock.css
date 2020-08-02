@@ -1,0 +1,27 @@
+.question-block {
+  display: flex;
+  height: 150px;
+  background: green;
+  padding: 10px;
+}
+
+.question-block img {
+  width: 200px;
+  height: 150px;
+  border-radius: 5%;
+  margin-right: 50px;
+}
+
+.question-block__body {
+  width: 100%;
+}
+
+.question-block__body span {
+  font-size: 25px;
+}
+
+.question-block__body .body__line {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}

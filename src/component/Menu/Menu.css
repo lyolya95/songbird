@@ -1,0 +1,13 @@
+.menu {
+  height: 40px;
+  background: pink;
+}
+
+.menu ul {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  list-style: none;
+}

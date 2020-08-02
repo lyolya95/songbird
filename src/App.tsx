@@ -14,9 +14,13 @@ export const App = () => {
       <Header />
       <Menu category={category} />
       <QuestionBlock />
-      <ListItem />
-      <InformationBlock />
-      <Button color="primary" />
+      <div className="content">
+        <ListItem />
+        <InformationBlock />
+      </div>
+      <div className="button-next">
+        <Button color="default">Следующий уровень</Button>
+      </div>
     </div>
   );
 };
