@@ -1,9 +1,6 @@
 import React from 'react';
 import './Menu.css';
-
-export interface MenuProps {
-  category: string[];
-}
+import { MenuProps } from './Menu.model';
 
 export const Menu = ({ category }: MenuProps) => {
   return (
