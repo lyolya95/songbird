@@ -1,4 +1,3 @@
-import { CardMedia } from '@material-ui/core';
 import React from 'react';
 import imgInformation from '../../image/logo.jpg';
 import './InformationBlock.css';
@@ -11,7 +10,7 @@ export const InformationBlock = () => {
         <div>
           <h2>1</h2>
           <h3>2</h3>
-          <CardMedia image="#" />
+          {/* <CardMedia image="#" /> */}
         </div>
       </div>
       <div className="block2">Opisanie</div>

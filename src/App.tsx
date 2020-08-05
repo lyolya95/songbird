@@ -1,6 +1,6 @@
-import { Button } from '@material-ui/core';
 import React from 'react';
 import './App.css';
+import './bootstrap.min.css';
 import { Header } from './component/Header';
 import { InformationBlock } from './component/InformationBlock';
 import { ListItem } from './component/ListItem';
@@ -19,7 +19,7 @@ export const App = () => {
         <InformationBlock />
       </div>
       <div className="button-next">
-        <Button color="default">Следующий уровень</Button>
+        <button>Следующий уровень</button>
       </div>
     </div>
   );
