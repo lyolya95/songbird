@@ -1,5 +1,9 @@
+.App {
+  max-width: 80%;
+  margin: 0 auto;
+}
 .content {
-  display: flex;
+  margin-bottom: 10px;
 }
 
 .button-next button {

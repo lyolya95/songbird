@@ -13,13 +13,13 @@ export const QuestionBlock = (props: QuestionBlockProps) => {
     <div className="question-block">
       {true && (
         <img
-          src={false ? `${dataQuestion?.image}` : `${imgInformation}`}
+          src={true ? `${dataQuestion?.image}` : `${imgInformation}`}
           alt="Изображение исполнителя"
           className="block-image"
         />
       )}
       <div className="question-block__body">
-        <span>{false ? dataQuestion?.name : '* * * * *'}</span>
+        <span>{true ? dataQuestion?.name : '* * * * *'}</span>
         <div className="body__line"></div>
         <AudioPlayer audioFiles={playlist} playerWidth="80%" fontSize="1.5rem" iconSize="2.5rem" />
       </div>

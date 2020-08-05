@@ -1,6 +1,7 @@
 .menu {
   height: 40px;
-  background: pink;
+  margin-bottom: 10px;
+  background-color: #dadada;
 }
 
 .menu ul {

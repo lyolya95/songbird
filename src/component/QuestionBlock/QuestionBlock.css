@@ -1,13 +1,19 @@
 .question-block {
   display: flex;
+  padding: 0 10px;
+  margin-bottom: 10px;
   padding: 10px;
+  background-color: #dadada;
 }
 
 .question-block .block-image {
-  width: 200px;
-  height: 150px;
-  border-radius: 5%;
-  margin-right: 50px;
+  height: 210px;
+  width: 240px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 30px;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .question-block__body {
@@ -18,7 +24,10 @@
   width: 80%;
 }
 
-.audio-player-track-name {
+.audio-player-track-name,
+#rewind,
+#forward,
+#loop {
   display: none;
 }
 

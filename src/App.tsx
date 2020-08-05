@@ -14,8 +14,9 @@ export const App = () => {
   const [dataQuestion, setDataQuestion] = useState<DataQuestionState | null>(null);
 
   useEffect(() => {
+    let idx = [1, 2, 3, 4, 5][Math.floor(Math.random() * [1, 2, 3, 4, 5].length)];
     if (data) {
-      setDataQuestion(data[0][0]);
+      setDataQuestion(data[0][idx]);
     }
   }, []);
 
@@ -24,11 +25,11 @@ export const App = () => {
       <Header />
       <Menu category={category} />
       <QuestionBlock dataQuestion={dataQuestion} />
-      <div className="row mb2">
-        <div className="col-md-6">
+      <div className="content mb2 d-flex">
+        <div className="content_item1 col-md-6">
           <ListItem />
         </div>
-        <div className="col-md-6">
+        <div className="content_item2 col-md-6">
           <InformationBlock />
         </div>
       </div>
