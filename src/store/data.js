@@ -1,10 +1,11 @@
+import zveri from '../audio/1.mp3';
 export const data = [
   [{
       id: 1,
       name: 'Звери',
       description: '«Зве́ри» — российская поп-рок-группа, созданная Романом Билыком в 2001 году. Лауреат премии MTV Россия и премии «Дебют». На премии Муз-ТВ группа побеждала в номинации «Лучшая рок-группа» 9 раз.',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Roman_Bilyk_in_Baku_%28Azerbaijan%29.jpg/548px-Roman_Bilyk_in_Baku_%28Azerbaijan%29.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
+      audio: `${zveri}`
     },
     {
       id: 2,
