@@ -5,7 +5,7 @@ import { QuestionBlockProps } from './question.model';
 import './QuestionBlock.css';
 
 export const QuestionBlock = (props: QuestionBlockProps) => {
-  const { dataQuestion } = props;
+  const { dataQuestion, isDisabled } = props;
 
   let playlist = [{ src: `${dataQuestion?.audio}` }];
 
@@ -13,13 +13,13 @@ export const QuestionBlock = (props: QuestionBlockProps) => {
     <div className="question-block">
       {true && (
         <img
-          src={true ? `${dataQuestion?.image}` : `${imgInformation}`}
+          src={isDisabled ? `${dataQuestion?.image}` : `${imgInformation}`}
           alt="Изображение исполнителя"
           className="block-image"
         />
       )}
       <div className="question-block__body">
-        <span>{true ? dataQuestion?.name : '* * * * *'}</span>
+        <span>{isDisabled ? dataQuestion?.name : '* * * * *'}</span>
         <div className="body__line"></div>
         <AudioPlayer audioFiles={playlist} playerWidth="80%" fontSize="1.5rem" iconSize="2.5rem" />
       </div>

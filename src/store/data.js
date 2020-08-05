@@ -4,6 +4,8 @@ import track3 from '../audio/3.mp3';
 import track4 from '../audio/4.mp3';
 import track5 from '../audio/5.mp3';
 import track6 from '../audio/6.mp3';
+import track7 from '../audio/7.mp3';
+import track8 from '../audio/8.mp3';
 export const data = [
   [
     {
@@ -61,82 +63,82 @@ export const data = [
   [
     {
       id: 1,
-      name: 'Miley Cyrus',
+      name: "Miley Cyrus - We Can't Stop",
       description: 'Aмериканская певица, автор песен и актриса.',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Miley_Cyrus_Primavera19_-226_%2848986293772%29_%28cropped%29.jpg/440px-Miley_Cyrus_Primavera19_-226_%2848986293772%29_%28cropped%29.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3',
+      audio: `${track7}`,
     },
     {
       id: 2,
-      name: 'Sia',
+      name: 'Sia - Chandelier',
       description: 'Aвстралийская певица и автор песен в стиле эмоциональный джаз и поп, а также актриса.',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sia_Seattle_%28cropped%29.jpg/548px-Sia_Seattle_%28cropped%29.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3',
+      audio: `${track8}`,
     },
     {
       id: 3,
-      name: 'Adele',
+      name: 'Adele - Skyfall',
       description: 'Британская певица, автор-исполнитель и поэт, лауреат 15 премий Грэмми.',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Adele_2016.jpg/548px-Adele_2016.jpg',
-      audio:
-        'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC510498-Coloeus%20monedula_2019.11.13_11.55_01.mp3',
+      audio: 'https://ru-drivemusic.net/dl/Yft_TB9vgwixOHocfG0PHQ/1596702163/download_music/2012/10/adele-skyfall.mp3',
     },
     {
       id: 4,
-      name: 'Ed Sheeran',
+      name: 'Ed Sheeran - I See Fire',
       description:
         'Британский поп-музыкант и актёр. Первый коммерческий успех пришёл к нему в июне 2011 года благодаря синглу «The A Team», занявшему третье место в британском чарте.',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ed_Sheeran_3%2C_2013.jpg/524px-Ed_Sheeran_3%2C_2013.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513326-190704_1146_TF-Glogow.mp3',
+      audio:
+        'https://ru-drivemusic.net/dl/ib7euPuP4B7fGIZUrgy53Q/1596702284/download_music/2013/11/ed-sheeran-i-see-fire.mp3',
     },
     {
       id: 5,
-      name: 'Taylor Swift',
+      name: 'Taylor Swift - Eyes Open',
       description: 'Американская кантри-поп-исполнительница, автор песен, музыкальный продюсер, режиссёр и актриса',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/191125_Taylor_Swift_at_the_2019_American_Music_Awards.png/548px-191125_Taylor_Swift_at_the_2019_American_Music_Awards.png',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC500868-Pica%20pica2019.08.23_09.18_02.mp3',
+      audio:
+        'https://ru-drivemusic.net/dl/b15tgngWYfSqNcYw-jot6Q/1596702378/download_music/2012/03/taylor-swift-eyes-open.mp3',
     },
     {
       id: 6,
-      name: 'MIKA',
+      name: 'MIKA - Relax',
       description: 'Британский певец американo-ливанского происхождения.',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mika_Cannes_2014.jpg/440px-Mika_Cannes_2014.jpg',
-      audio:
-        'https://www.xeno-canto.org/sounds/uploaded/TFOGOENSTQ/XC501517-191008_1590%201300.%20Eichelh%C3%A4her%20D%2C%20NW%2C%20LEV.%20Stephan%20Risch.mp3',
+      audio: 'https://ru-drivemusic.net/dl/oVBadFa5q0UB8rNFX3qkkg/1596702424/download_music/2013/12/mika-relax.mp3',
     },
   ],
   [
     {
       id: 1,
-      name: 'Miyagi',
+      name: 'Miyagi - Моя банда',
       description:
         'Российский хип-хоп-дуэт из города Владикавказ, Северная Осетия, образованный в 2015 году. Коллектив состоит из двух человек, известных под сценическими псевдонимами «Miyagi» — Азамат Кудзаев и «Andy Panda» — Сослан Бурнацев (Эндшпиль).',
       image: 'https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/05/28/67/23/82/f6dc12d40cd7.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC512407-150622_03%20zi%C4%99ba%20%282%29.mp3',
+      audio:
+        'https://ru-drivemusic.net/dl/SzIBxI6i8E9JWnJicqHEpg/1596702476/download_music/2016/12/miyagi-jendshpil-feat.-mantana-moja-banda.mp3',
     },
     {
       id: 2,
-      name: 'Markul',
+      name: 'Markul - B.I.D',
       description:
         'Российский хип-хоп-исполнитель, певец, автор песен и член творческого объединения «Green Park Gang».',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Markul_%D0%BD%D0%B0_VK_Fest_5.jpg/548px-Markul_%D0%BD%D0%B0_VK_Fest_5.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/OTVUCEGYZN/XC495381-Kruisbek%20roep%20NHD%20290619.mp3',
+      audio: 'https://ru-drivemusic.net/dl/fT93fqYhUbf2oznO6sW1LA/1596702524/download_music/2019/11/markul-b.i.d.mp3',
     },
     {
       id: 3,
-      name: 'Баста',
+      name: 'Баста - Мама',
       description:
         'Российский музыкант (исполнитель рэпа и других жанров, битмейкер, композитор), телерадиоведущий, актёр, сценарист, режиссёр и продюсер.',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Basta_and_Guf_at_Green_Theatre_100721.jpg/500px-Basta_and_Guf_at_Green_Theatre_100721.jpg',
-      audio:
-        'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC324106-Turkawka_Streptopelia_turtur_Poland_Jarek_Matusiak_2011625_07.mp3',
+      audio: 'https://ru-drivemusic.net/dl/VSBZ0dXRmLax5lAkkCis3w/1596702608/download_music/2013/11/basta-mama.mp3',
     },
     {
       id: 4,

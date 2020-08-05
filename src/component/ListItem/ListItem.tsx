@@ -1,16 +1,22 @@
 import React from 'react';
 import './ListItem.css';
 
-export const ListItem = () => {
+interface ListItemProps {
+  data: { id: number; name: string; description: string; image: string; audio: string }[];
+  handleClickListItem: (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
+}
+
+export const ListItem = (props: ListItemProps) => {
+  const { data, handleClickListItem } = props;
+
   return (
     <div className="list-item">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
+        {data?.map((i) => (
+          <li key={i.id} onClick={handleClickListItem}>
+            {i.name}
+          </li>
+        ))}
       </ul>
     </div>
   );
