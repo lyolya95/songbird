@@ -46,6 +46,7 @@ export const App = () => {
       const itemIndex = data[idDataComponent].filter((i) => i.name === value)[0]?.id;
       /** условие правильного неправильного ответа, для счетчика */
       itemIndex === dataComponent?.id ? setCount(maxCountComponent) : setMaxCountComponent(maxCountComponent - 1);
+      /** обновим индекс  */
       setIdItem(itemIndex);
     },
     [dataComponent, idDataComponent, maxCountComponent]
@@ -62,27 +63,36 @@ export const App = () => {
 
   return (
     <div className="App">
-      {idDataComponent >= 5 && <div>Мое почтение</div>}
-      <Header count={count} />
-      <Menu category={category} />
-      <QuestionBlock dataComponent={dataComponent} isDisabled={isDisabled} />
-      <div className="content mb2 d-flex">
-        <div className="content_item1 col-md-6">
-          <ListItem data={data[idDataComponent]} handleClickListItem={handleClickListItem} />
-        </div>
-        <div className="content_item2 col-md-6">
-          {idItem === 0 ? (
-            <div>Прослушайте песню и выберите правильный вариант ответа</div>
-          ) : (
-            <InformationBlock dataComponent={data[idDataComponent][idItem - 1]} />
-          )}
-        </div>
-      </div>
-      <div className="button-next">
-        <button disabled={!isDisabled} onClick={handleNextLvl}>
-          Следующий уровень
-        </button>
-      </div>
+      {idDataComponent === 5 ? (
+        count === 30 ? (
+          <div>Вы набрали максимальное количество</div>
+        ) : (
+          <div>Мое почтение</div>
+        )
+      ) : (
+        <>
+          <Header count={count} />
+          <Menu category={category} />
+          <QuestionBlock dataComponent={dataComponent} isDisabled={isDisabled} />
+          <div className="content mb2 d-flex">
+            <div className="content_item1 col-md-6">
+              <ListItem data={data[idDataComponent]} handleClickListItem={handleClickListItem} />
+            </div>
+            <div className="content_item2 col-md-6">
+              {idItem === 0 ? (
+                <div>Прослушайте песню и выберите правильный вариант ответа</div>
+              ) : (
+                <InformationBlock dataComponent={data[idDataComponent][idItem - 1]} />
+              )}
+            </div>
+          </div>
+          <div className="button-next">
+            <button disabled={!isDisabled} onClick={handleNextLvl}>
+              Следующий уровень
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 };
