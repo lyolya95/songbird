@@ -6,6 +6,7 @@ import { InformationBlock } from './component/InformationBlock';
 import { ListItem } from './component/ListItem';
 import { Menu } from './component/Menu';
 import { QuestionBlock } from './component/QuestionBlock';
+import { ResetButton } from './component/ResetButton';
 import { DataQuestionState } from './model/app.model';
 import { data } from './store/data';
 import { category } from './store/menu';
@@ -13,9 +14,7 @@ import { category } from './store/menu';
 export const App = () => {
   /** Данные для рандомного вопроса */
   const [dataComponent, setDataComponent] = useState<DataQuestionState | null>(null);
-  /** Отображение кнопки для перехода на след уровень
-   *  Отображение блока с вопросом при правильном ответе
-   */
+  /** Отображение блока с вопросом при правильном ответе */
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
   /** Id для сравнения ответов с вопросом*/
   const [idItem, setIdItem] = useState<number>(0);
@@ -48,37 +47,44 @@ export const App = () => {
       if (!isDisabled) {
         itemIndex === dataComponent?.id ? setCount(maxCountComponent) : setMaxCountComponent(maxCountComponent - 1);
       }
-
-      /** обновим индекс  */
       setIdItem(itemIndex);
+      /** индикация правильного ответа */
+      if (!isDisabled) {
+        data[idDataComponent]
+          ?.filter((item, i) => i === itemIndex - 1)
+          .map((i) => (i.activeClass = i.id === dataComponent?.id ? 'green' : 'red'));
+      }
     },
     [dataComponent, idDataComponent, maxCountComponent, isDisabled]
   );
 
   const handleNextLvl = useCallback(() => {
+    data[idDataComponent].map((i) => (i.activeClass = ''));
     if (idDataComponent < 6) {
       setIdDataComponent(idDataComponent + 1);
     }
     setIsDisabled(false);
     setIdItem(0);
     setMaxCountComponent(count + 5);
-    selectMenu(idDataComponent);
+    /** индикация меню с категориями */
+    category.filter((item, i) => i === idDataComponent).forEach((i) => (i.activeClass = ''));
+    category.filter((item, i) => i === idDataComponent + 1).forEach((i) => (i.activeClass = 'active-menu'));
   }, [count, idDataComponent]);
 
-  const selectMenu = (index) => {
-    let idx = index;
-    category.filter((item, i) => i === idx).forEach((i) => (i.activeClass = ''));
-    category.filter((item, i) => i === idx + 1).forEach((i) => (i.activeClass = 'active-menu'));
-    return category;
+  const handleResetApp = () => {
+    category.filter((i, id) => id === 0).map((i) => (i.activeClass = 'active-menu'));
+    setIdDataComponent(0);
+    setCount(0);
+    setMaxCountComponent(5);
   };
 
   return (
     <div className="App">
-      {idDataComponent === 6 ? (
+      {idDataComponent !== 6 ? (
         count === 30 ? (
           <div>Вы набрали максимальное количество</div>
         ) : (
-          <div>Мое почтение</div>
+          <ResetButton handleResetApp={handleResetApp} />
         )
       ) : (
         <>
@@ -87,11 +93,7 @@ export const App = () => {
           <QuestionBlock dataComponent={dataComponent} isDisabled={isDisabled} />
           <div className="content mb2 d-flex">
             <div className="content_item1 col-md-5">
-              <ListItem
-                data={data[idDataComponent]}
-                handleClickListItem={handleClickListItem}
-                isDisabled={isDisabled}
-              />
+              <ListItem data={data[idDataComponent]} handleClickListItem={handleClickListItem} />
             </div>
             <div className="content_item2 col-md-7">
               {idItem === 0 ? (

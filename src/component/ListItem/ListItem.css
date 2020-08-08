@@ -12,6 +12,7 @@
 .list-item ul li {
   border-bottom: 2px solid rgb(129, 170, 180);
   padding: 15px;
+  cursor: pointer;
 }
 
 .list-item ul li:last-child {
@@ -19,9 +20,9 @@
 }
 
 .list-item ul .red {
-  color: red;
+  background-color: rgba(165, 35, 35, 0.664);
 }
 
 .list-item ul .green {
-  color: green;
+  background-color: #1aaf47be;
 }
