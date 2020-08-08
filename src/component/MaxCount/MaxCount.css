@@ -1,0 +1,13 @@
+.max-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.max-count .title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgb(129, 170, 180);
+}

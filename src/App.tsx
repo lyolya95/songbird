@@ -4,6 +4,7 @@ import './bootstrap.min.css';
 import { Header } from './component/Header';
 import { InformationBlock } from './component/InformationBlock';
 import { ListItem } from './component/ListItem';
+import { MaxCount } from './component/MaxCount';
 import { Menu } from './component/Menu';
 import { QuestionBlock } from './component/QuestionBlock';
 import { ResetButton } from './component/ResetButton';
@@ -80,9 +81,9 @@ export const App = () => {
 
   return (
     <div className="App">
-      {idDataComponent !== 6 ? (
+      {idDataComponent === 6 ? (
         count === 30 ? (
-          <div>Вы набрали максимальное количество</div>
+          <MaxCount />
         ) : (
           <ResetButton handleResetApp={handleResetApp} />
         )
