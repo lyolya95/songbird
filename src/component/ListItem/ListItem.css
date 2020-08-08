@@ -17,3 +17,11 @@
 .list-item ul li:last-child {
   border-bottom: none;
 }
+
+.list-item ul .red {
+  color: red;
+}
+
+.list-item ul .green {
+  color: green;
+}

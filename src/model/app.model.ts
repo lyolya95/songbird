@@ -5,6 +5,7 @@ export interface DataProps {
     description: string;
     image: string;
     audio: string;
+    activeClass: string;
   }[][];
 }
 
@@ -14,4 +15,5 @@ export interface DataQuestionState {
   description: string;
   image: string;
   audio: string;
+  activeClass: string;
 }

@@ -19,3 +19,7 @@
   width: 100%;
   background-color: #326163;
 }
+
+.menu ul .active-menu {
+  background-color: rgb(129, 170, 180);
+}

@@ -23,11 +23,11 @@ export const App = () => {
   const [idDataComponent, setIdDataComponent] = useState<number>(0);
   /** Очки */
   const [count, setCount] = useState<number>(0);
-  const [maxCountComponent, setMaxCountComponent] = useState<number>(6);
+  const [maxCountComponent, setMaxCountComponent] = useState<number>(5);
 
   useEffect(() => {
-    const idxRandom: number = [1, 2, 3, 4, 5][Math.floor(Math.random() * [1, 2, 3, 4, 5].length)];
-    if (data) {
+    if (data && idDataComponent < 6) {
+      const idxRandom = [1, 2, 3, 4, 5][Math.floor(Math.random() * [1, 2, 3, 4, 5].length)];
       setDataComponent(data[idDataComponent][idxRandom]);
     }
   }, [idDataComponent]);
@@ -52,7 +52,7 @@ export const App = () => {
       /** обновим индекс  */
       setIdItem(itemIndex);
     },
-    [dataComponent, idDataComponent, maxCountComponent]
+    [dataComponent, idDataComponent, maxCountComponent, isDisabled]
   );
 
   const handleNextLvl = useCallback(() => {
@@ -61,12 +61,20 @@ export const App = () => {
     }
     setIsDisabled(false);
     setIdItem(0);
-    setMaxCountComponent(count + 6);
+    setMaxCountComponent(count + 5);
+    selectMenu(idDataComponent);
   }, [count, idDataComponent]);
+
+  const selectMenu = (index) => {
+    let idx = index;
+    category.filter((item, i) => i === idx).forEach((i) => (i.activeClass = ''));
+    category.filter((item, i) => i === idx + 1).forEach((i) => (i.activeClass = 'active-menu'));
+    return category;
+  };
 
   return (
     <div className="App">
-      {idDataComponent === 5 ? (
+      {idDataComponent === 6 ? (
         count === 30 ? (
           <div>Вы набрали максимальное количество</div>
         ) : (
@@ -79,7 +87,11 @@ export const App = () => {
           <QuestionBlock dataComponent={dataComponent} isDisabled={isDisabled} />
           <div className="content mb2 d-flex">
             <div className="content_item1 col-md-5">
-              <ListItem data={data[idDataComponent]} handleClickListItem={handleClickListItem} />
+              <ListItem
+                data={data[idDataComponent]}
+                handleClickListItem={handleClickListItem}
+                isDisabled={isDisabled}
+              />
             </div>
             <div className="content_item2 col-md-7">
               {idItem === 0 ? (
@@ -90,7 +102,7 @@ export const App = () => {
             </div>
           </div>
           <div className="button-next">
-            <button disabled={!isDisabled} onClick={handleNextLvl}>
+            <button disabled={!isDisabled} onClick={handleNextLvl} className={!isDisabled ? 'button' : ''}>
               Следующий уровень
             </button>
           </div>

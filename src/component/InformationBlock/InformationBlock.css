@@ -1,11 +1,13 @@
 .content_item2 {
-  border: 4px solid #326163;
+  border: 3px solid #326163;
   color: aliceblue;
-  padding: 0;
+  padding: 10px;
 }
 
 .information-block {
   padding: 10px;
+  height: 100%;
+  background-color: #326163;
 }
 .information-block .block1 {
   margin-bottom: 10px;

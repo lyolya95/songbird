@@ -6,8 +6,10 @@ export const Menu = ({ category }: MenuProps) => {
   return (
     <div className="menu">
       <ul>
-        {category.map((i: string, idx: number) => (
-          <li key={idx}>{i}</li>
+        {category.map((i, idx: number) => (
+          <li key={idx} className={i.activeClass}>
+            {i.name}
+          </li>
         ))}
       </ul>
     </div>

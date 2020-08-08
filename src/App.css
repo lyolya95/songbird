@@ -15,3 +15,10 @@
   cursor: pointer;
   border: 2px solid rgb(129, 170, 180);
 }
+
+.button-next .button {
+  background-color: #69696996;
+  color: #5a5a5ada;
+  cursor: not-allowed;
+  border: 2px solid rgb(89, 90, 90);
+}

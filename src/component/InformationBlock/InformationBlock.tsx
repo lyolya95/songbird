@@ -13,7 +13,7 @@ export const InformationBlock = (props: InformationBlockProps) => {
         <img src={dataComponent?.image} alt="Изображение исполнителя" className="image" />
         <div>
           <h3>{dataComponent?.name}</h3>
-          <AudioPlayer audioFiles={playlist} iconSize="1rem" />
+          <AudioPlayer audioFiles={playlist} iconSize="1.5rem" />
         </div>
       </div>
       <div className="block2">{dataComponent?.description}</div>

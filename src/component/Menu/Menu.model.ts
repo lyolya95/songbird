@@ -1,3 +1,3 @@
 export interface MenuProps {
-  category: string[];
+  category: { id: number; name: string; activeClass: string }[];
 }
