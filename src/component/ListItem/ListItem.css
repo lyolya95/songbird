@@ -1,21 +1,19 @@
 .content_item1 {
-  background-color: #dadada;
-  margin-right: 10px;
+  background-color: #326163;
+  padding: 0;
 }
 
 .list-item ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 }
 
 .list-item ul li {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid rgb(129, 170, 180);
   padding: 15px;
 }
 
-.list-item ul:first-child {
-  border-top: 1px solid black;
+.list-item ul li:last-child {
+  border-bottom: none;
 }

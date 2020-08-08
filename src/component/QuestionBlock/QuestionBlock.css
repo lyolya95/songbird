@@ -1,9 +1,8 @@
 .question-block {
   display: flex;
-  padding: 0 10px;
-  margin-bottom: 10px;
   padding: 10px;
-  background-color: #dadada;
+  margin-bottom: 10px;
+  background-color: #326163;
 }
 
 .question-block .block-image {
@@ -38,5 +37,5 @@
 .question-block__body .body__line {
   width: 100%;
   margin-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(129, 170, 180);
 }

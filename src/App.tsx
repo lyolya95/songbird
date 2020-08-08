@@ -45,7 +45,10 @@ export const App = () => {
       /** Получим индекс нажатого элемента */
       const itemIndex = data[idDataComponent].filter((i) => i.name === value)[0]?.id;
       /** условие правильного неправильного ответа, для счетчика */
-      itemIndex === dataComponent?.id ? setCount(maxCountComponent) : setMaxCountComponent(maxCountComponent - 1);
+      if (!isDisabled) {
+        itemIndex === dataComponent?.id ? setCount(maxCountComponent) : setMaxCountComponent(maxCountComponent - 1);
+      }
+
       /** обновим индекс  */
       setIdItem(itemIndex);
     },
@@ -75,12 +78,12 @@ export const App = () => {
           <Menu category={category} />
           <QuestionBlock dataComponent={dataComponent} isDisabled={isDisabled} />
           <div className="content mb2 d-flex">
-            <div className="content_item1 col-md-6">
+            <div className="content_item1 col-md-5">
               <ListItem data={data[idDataComponent]} handleClickListItem={handleClickListItem} />
             </div>
-            <div className="content_item2 col-md-6">
+            <div className="content_item2 col-md-7">
               {idItem === 0 ? (
-                <div>Прослушайте песню и выберите правильный вариант ответа</div>
+                <div className="information-block">Послушайте песню и выберите правильный вариант ответа</div>
               ) : (
                 <InformationBlock dataComponent={data[idDataComponent][idItem - 1]} />
               )}

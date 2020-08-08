@@ -10,7 +10,7 @@ export const InformationBlock = (props: InformationBlockProps) => {
   return (
     <div className="information-block">
       <div className="block1 d-flex">
-        <img src={dataComponent?.image} alt="Изображение исполнителя" />
+        <img src={dataComponent?.image} alt="Изображение исполнителя" className="image" />
         <div>
           <h3>{dataComponent?.name}</h3>
           <AudioPlayer audioFiles={playlist} iconSize="1rem" />

@@ -8,4 +8,10 @@
 
 .button-next button {
   width: 100%;
+  color: white;
+  font-size: large;
+  height: 60px;
+  background-color: #326163;
+  cursor: pointer;
+  border: 2px solid rgb(129, 170, 180);
 }

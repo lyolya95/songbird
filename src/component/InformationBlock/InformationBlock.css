@@ -1,5 +1,7 @@
 .content_item2 {
-  background-color: #dadada;
+  border: 4px solid #326163;
+  color: aliceblue;
+  padding: 0;
 }
 
 .information-block {
@@ -7,11 +9,12 @@
 }
 .information-block .block1 {
   margin-bottom: 10px;
+  align-items: center;
 }
 
-.information-block .block1 img {
-  width: 220px;
-  height: 180px;
+.information-block .block1 .image {
+  width: 210px;
+  height: 170px;
   border-radius: 5%;
   margin-right: 10px;
 }

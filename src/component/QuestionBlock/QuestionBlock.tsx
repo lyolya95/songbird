@@ -25,6 +25,7 @@ export const QuestionBlock = (props: QuestionBlockProps) => {
           playerWidth="80%"
           fontSize="1.5rem"
           iconSize="2.5rem"
+          color="white"
           play={false}
         />
       </div>
