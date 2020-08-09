@@ -2,7 +2,7 @@
   display: flex;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #326163;
+  border: 3px solid #326163;
 }
 
 .question-block .block-image {
@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: center;
   width: 80%;
+  border: 2px solid rgb(129, 170, 180);
 }
 
 .audio-player-track-name,
