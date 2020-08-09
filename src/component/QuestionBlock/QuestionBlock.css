@@ -22,6 +22,7 @@
   justify-content: center;
   width: 80%;
   border: 2px solid rgb(129, 170, 180);
+  background-color: #326163;
 }
 
 .audio-player-track-name,
