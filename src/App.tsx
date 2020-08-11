@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import useSound from 'use-sound';
 import './App.css';
 import './bootstrap.min.css';
 import { Header } from './component/Header';
@@ -8,6 +9,9 @@ import { MaxCount } from './component/MaxCount';
 import { Menu } from './component/Menu';
 import { QuestionBlock } from './component/QuestionBlock';
 import { ResetButton } from './component/ResetButton';
+import congratulationsMedia from './media/congratulations.wav';
+import correctMedia from './media/correct.wav';
+import wrongMedia from './media/wrong.wav';
 import { DataQuestionState } from './model/app.model';
 import { data } from './store/data';
 import { category } from './store/menu';
@@ -24,6 +28,9 @@ export const App = () => {
   /** Очки */
   const [count, setCount] = useState<number>(0);
   const [maxCountComponent, setMaxCountComponent] = useState<number>(5);
+  const [wrong] = useSound(wrongMedia);
+  const [correct] = useSound(correctMedia);
+  const [congratulations] = useSound(congratulationsMedia);
 
   useEffect(() => {
     if (data && idDataComponent < 6) {
@@ -46,6 +53,7 @@ export const App = () => {
       const itemIndex = data[idDataComponent].filter((i) => i.name === value)[0]?.id;
       /** условие правильного неправильного ответа, для счетчика */
       if (!isDisabled) {
+        itemIndex !== dataComponent?.id ? wrong() : correct();
         itemIndex === dataComponent?.id ? setCount(maxCountComponent) : setMaxCountComponent(maxCountComponent - 1);
       }
       setIdItem(itemIndex);
@@ -56,7 +64,7 @@ export const App = () => {
           .map((i) => (i.activeClass = i.id === dataComponent?.id ? 'green' : 'red'));
       }
     },
-    [dataComponent, idDataComponent, maxCountComponent, isDisabled]
+    [dataComponent, idDataComponent, maxCountComponent, isDisabled, correct, wrong]
   );
 
   const handleNextLvl = useCallback(() => {
@@ -64,6 +72,7 @@ export const App = () => {
     if (idDataComponent < 6) {
       setIdDataComponent(idDataComponent + 1);
     }
+    count === 30 && congratulations();
     setIsDisabled(false);
     setIdItem(0);
     setMaxCountComponent(count + 5);
