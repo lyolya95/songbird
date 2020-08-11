@@ -1,6 +1,6 @@
 import React from 'react';
 import AudioPlayer from 'react-modular-audio-player';
-import imgInformation from '../../image/logo.jpg';
+import imgInformation from '../../image/logo.png';
 import { QuestionBlockProps } from './question.model';
 import './QuestionBlock.css';
 

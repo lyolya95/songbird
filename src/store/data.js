@@ -100,8 +100,8 @@ export const data = [
   [{
       id: 1,
       name: 'Miyagi - Моя банда',
-      description: 'Российский хип-хоп-дуэт из города Владикавказ, Северная Осетия, образованный в 2015 году. Коллектив состоит из двух человек, известных под сценическими псевдонимами «Miyagi» — Азамат Кудзаев и «Andy Panda» — Сослан Бурнацев (Эндшпиль).',
-      image: 'https://lh3.googleusercontent.com/proxy/sCumk7ietl-whbphtX34YCfmfahPA6dLT4YeYTOsMW29avDYndKP6CR8IRzbYSNEdfU44rlOE3dsa3GZYoTPHL97Ne4EjkKkIuFq9QkDf4CqwDLYMdGQ3YqRpF6b',
+      description: 'Российский хип-хоп-дуэт из города Владикавказ, Северная Осетия, образованный в 2015 году. Коллектив состоит из двух человек, «Miyagi» — Азамат Кудзаев и «Andy Panda» — Сослан Бурнацев (Эндшпиль).',
+      image: 'https://e.snmc.io/i/300/w/98c63c23f4e23fa70171688d92ec8ed8/7082766',
       audio: 'https://ru-drivemusic.net/dl/SzIBxI6i8E9JWnJicqHEpg/1596702476/download_music/2016/12/miyagi-jendshpil-feat.-mantana-moja-banda.mp3',
       activeClass: '',
     },
@@ -230,7 +230,7 @@ export const data = [
     {
       id: 5,
       name: 'The White Stripes - Seven Nation Army',
-      description: 'американская рок-группа, образованная в 1997 году в Детройте, штат Мичиган. В состав The White Stripes с самого начала входили лишь два человека: Джек Уайт — гитарист, пианист и вокалист, и Мег Уайт — барабанщица-перкуссионистка, иногда исполняющая бэк-вокал.',
+      description: 'Aмериканская рок-группа, образованная в 1997 году в Детройте, штат Мичиган. В состав The White Stripes входят два человека: Джек Уайт — вокалист, и Мег Уайт — барабанщица-перкуссионистка.',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Meg_%26_Jack%2C_The_White_Stripes.jpg/540px-Meg_%26_Jack%2C_The_White_Stripes.jpg',
       audio: 'https://ru-drivemusic.net/dl/F1WWHAqDAzgdayt3RxdaDg/1596757482/download_music/2018/03/the-white-stripes-seven-nation-army.mp3',
       activeClass: '',

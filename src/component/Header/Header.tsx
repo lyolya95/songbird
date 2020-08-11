@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../image/logo.jpg';
+import logo from '../../image/logo2.png';
 import './Header.css';
 
 interface HeaderProps {

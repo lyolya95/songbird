@@ -58,7 +58,7 @@
     border: 3px solid #326163;
   }
   .information-block {
-    height: 360px !important;
+    height: 400px !important;
   }
 
   .list-item ul li {
@@ -90,6 +90,9 @@
   }
 
   .content .content_item2 {
+    margin-bottom: 10px;
+  }
+  .information-block .block1 .image {
     margin-bottom: 10px;
   }
 }
