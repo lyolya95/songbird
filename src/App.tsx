@@ -79,7 +79,7 @@ export const App = () => {
     /** индикация меню с категориями */
     category.filter((item, i) => i === idDataComponent).forEach((i) => (i.activeClass = ''));
     category.filter((item, i) => i === idDataComponent + 1).forEach((i) => (i.activeClass = 'active-menu'));
-  }, [count, idDataComponent]);
+  }, [count, idDataComponent, congratulations]);
 
   const handleResetApp = () => {
     category.filter((i, id) => id === 0).map((i) => (i.activeClass = 'active-menu'));
@@ -94,7 +94,7 @@ export const App = () => {
         count === 30 ? (
           <MaxCount />
         ) : (
-          <ResetButton handleResetApp={handleResetApp} />
+          <ResetButton handleResetApp={handleResetApp} count={count} />
         )
       ) : (
         <>

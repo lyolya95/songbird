@@ -68,6 +68,7 @@
   .question-block__body {
     width: 100% !important;
     border: 2px solid rgb(129, 170, 180);
+    padding: 10px;
   }
 
   .question-block__body span {

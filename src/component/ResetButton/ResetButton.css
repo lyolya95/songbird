@@ -13,6 +13,11 @@
   border-bottom: 2px solid rgb(129, 170, 180);
 }
 
+.reset-button .reset-title1 {
+  font-size: 40px;
+  border-bottom: 2px solid rgb(129, 170, 180);
+}
+
 .reset-button button {
   width: 52%;
   height: 60px;
