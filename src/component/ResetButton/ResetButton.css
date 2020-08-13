@@ -8,13 +8,15 @@
 }
 
 .reset-button .reset-title {
-  font-size: 22px;
   margin-bottom: 20px;
+  font-size: 22px;
   border-bottom: 2px solid rgb(129, 170, 180);
+  color: #326163;
 }
 
 .reset-button .reset-title1 {
   font-size: 40px;
+  color: #326163;
   border-bottom: 2px solid rgb(129, 170, 180);
 }
 

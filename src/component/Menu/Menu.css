@@ -12,5 +12,9 @@
 }
 
 .menu ul .active-menu {
-  background-color: rgb(129, 170, 180);
+  background-color: white;
+  background-image: radial-gradient(#addbd6 5px, transparent 3px);
+  background-size: 11px 11px;
+  color: #326163;
+  font-size: 18px;
 }

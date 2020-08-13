@@ -7,7 +7,9 @@
 }
 
 .max-count .title {
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgb(129, 170, 180);
+  border-bottom: 2px solid #326163;
+  color: #326163;
+  text-align: center;
 }
