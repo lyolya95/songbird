@@ -40,9 +40,7 @@ export const App = () => {
   }, [idDataComponent]);
 
   useEffect(() => {
-    if (dataComponent?.id === idItem) {
-      setIsDisabled(true);
-    }
+    dataComponent?.id === idItem && setIsDisabled(true);
   }, [dataComponent, idItem]);
 
   /** Нажатие по вариантам ответов */

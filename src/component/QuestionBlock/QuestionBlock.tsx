@@ -1,13 +1,12 @@
-import React from 'react';
-import AudioPlayer from 'react-modular-audio-player';
+import React, { createRef } from 'react';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 import imgInformation from '../../image/logo.png';
 import { QuestionBlockProps } from './question.model';
 import './QuestionBlock.css';
 
-export const QuestionBlock = (props: QuestionBlockProps) => {
-  const { dataComponent, isDisabled } = props;
-  const playlist = [{ src: `${dataComponent?.audio}` }];
-
+export const QuestionBlock = ({ dataComponent, isDisabled }: QuestionBlockProps) => {
+  const player = createRef<any>();
   dataComponent?.name && !isDisabled && console.log('Правильный ответ:  ' + dataComponent.name);
 
   return (
@@ -21,12 +20,13 @@ export const QuestionBlock = (props: QuestionBlockProps) => {
         <span>{isDisabled ? dataComponent?.name : '* * * * *'}</span>
         <div className="body__line"></div>
         <AudioPlayer
-          audioFiles={!isDisabled ? playlist : [{ src: `` }]}
-          playerWidth="80%"
-          fontSize="1.5rem"
-          iconSize="2.5rem"
-          color="white"
-          play={false}
+          autoPlay={false}
+          ref={player}
+          src={!isDisabled ? `${dataComponent?.audio}` : ``}
+          onListen={() => {
+            isDisabled && player?.current?.audio && player.current.audio.current.pause();
+          }}
+          autoPlayAfterSrcChange={false}
         />
       </div>
     </div>

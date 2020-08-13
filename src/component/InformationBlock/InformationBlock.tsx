@@ -1,19 +1,16 @@
 import React from 'react';
-import AudioPlayer from 'react-modular-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
 import './InformationBlock.css';
 import { InformationBlockProps } from './informationBlock.model';
 
-export const InformationBlock = (props: InformationBlockProps) => {
-  const { dataComponent } = props;
-  const playlist = [{ src: `${dataComponent?.audio}` }];
-
+export const InformationBlock = ({ dataComponent }: InformationBlockProps) => {
   return (
     <div className="information-block">
       <div className="block1 d-flex">
         <img src={dataComponent?.image} alt="Изображение исполнителя" className="image" />
-        <div>
+        <div className="block1-play">
           <h3>{dataComponent?.name}</h3>
-          <AudioPlayer audioFiles={playlist} iconSize="1.5rem" />
+          <AudioPlayer src={dataComponent?.audio} autoPlayAfterSrcChange={false} />
         </div>
       </div>
       <div className="block2">{dataComponent?.description}</div>

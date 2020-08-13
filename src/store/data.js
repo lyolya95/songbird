@@ -68,7 +68,7 @@ export const data = [
       id: 3,
       name: 'Adele - Skyfall',
       description: 'Британская певица, автор-исполнитель и поэт, лауреат 15 премий Грэмми.',
-      image: 'https://lh3.googleusercontent.com/proxy/b-k_w-YqlnsKKYq27PSImI8eOsoewlF4sB7joMPPnWq1O1plQmdugfJfSiwCU-5olbtQuKtzKZprzS2T98ONCVYV8-OZA4OuHf2tICsHNFgo5Lo3XJniL6HEU9tfGxLB3g',
+      image: 'https://i0.wp.com/ukutabs.com/uploads/2012/04/551250871.jpg?fit=300%2C300&ssl=1',
       audio: 'https://ru-drivemusic.net/dl/MSWoje0RyFXCNpKubPaHGA/1596755287/download_music/2012/10/adele-skyfall.mp3',
       activeClass: '',
     },

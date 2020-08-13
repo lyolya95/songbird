@@ -97,7 +97,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 604px) {
   .block1 h3 {
     font-size: 20px;
   }
@@ -108,5 +108,9 @@
 
   .audio-player-time {
     display: none !important;
+  }
+
+  .information-block {
+    height: 500px !important;
   }
 }
