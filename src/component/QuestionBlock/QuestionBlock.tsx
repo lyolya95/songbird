@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { createRef, useEffect } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import imgInformation from '../../image/logo.png';
@@ -7,7 +7,11 @@ import './QuestionBlock.css';
 
 export const QuestionBlock = ({ dataComponent, isDisabled }: QuestionBlockProps) => {
   const player = createRef<any>();
-  dataComponent?.name && !isDisabled && console.log('Правильный ответ:  ' + dataComponent.name);
+
+  useEffect(() => {
+    dataComponent?.name && !isDisabled && console.log('Правильный ответ:  ' + dataComponent.name);
+    // eslint-disable-next-line
+  }, [dataComponent]);
 
   return (
     <div className="question-block">

@@ -33,6 +33,10 @@ export const App = () => {
   const [congratulations] = useSound(congratulationsMedia);
 
   useEffect(() => {
+    alert('Перед началом игры, убедитесь, что у вас отключен впн. Приятной Игры!)');
+  }, []);
+
+  useEffect(() => {
     if (data && idDataComponent < 6) {
       const idxRandom = [1, 2, 3, 4, 5][Math.floor(Math.random() * [1, 2, 3, 4, 5].length)];
       setDataComponent(data[idDataComponent][idxRandom]);
@@ -52,7 +56,12 @@ export const App = () => {
       /** условие правильного неправильного ответа, для счетчика */
       if (!isDisabled) {
         itemIndex !== dataComponent?.id ? wrong() : correct();
-        itemIndex === dataComponent?.id ? setCount(maxCountComponent) : setMaxCountComponent(maxCountComponent - 1);
+        if (itemIndex === dataComponent?.id) {
+          setCount(maxCountComponent);
+          setIsDisabled(true);
+        } else {
+          maxCountComponent > 0 && setMaxCountComponent(maxCountComponent - 1);
+        }
       }
       setIdItem(itemIndex);
       /** индикация правильного ответа */
