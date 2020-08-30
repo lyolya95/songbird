@@ -1,0 +1,26 @@
+.content_item2 {
+  border: 3px solid #326163;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.information-block {
+  padding: 10px;
+  height: 100%;
+  background-color: #326163;
+}
+.information-block .block1 {
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.block1 .block1-play {
+  width: 100%;
+}
+
+.information-block .block1 .image {
+  width: 210px;
+  height: 170px;
+  border-radius: 5%;
+  margin-right: 10px;
+}

@@ -1,0 +1,33 @@
+.reset-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.reset-button .reset-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  border-bottom: 2px solid rgb(129, 170, 180);
+  color: #326163;
+}
+
+.reset-button .reset-title1 {
+  font-size: 40px;
+  color: #326163;
+  border-bottom: 2px solid rgb(129, 170, 180);
+}
+
+.reset-button button {
+  width: 52%;
+  height: 60px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  background-color: #326163;
+  cursor: pointer;
+  border: 2px solid rgb(129, 170, 180);
+}

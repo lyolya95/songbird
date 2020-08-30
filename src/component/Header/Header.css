@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.header span {
+  font-size: 25px;
+  color: #326163;
+}
+
+.header img {
+  width: 110px;
+  height: 80px;
+  border-radius: 50%;
+}
